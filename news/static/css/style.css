@@ -1,0 +1,268 @@
+html {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    border: none;
+    color: rgb(239,241,244);
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    text-decoration: none;
+}
+
+body {
+    align-items: center;
+    background-color: rgb(27,26,28);
+    display: flex;
+    flex-direction: column;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    height: 100%;
+}
+
+input {
+    color: rgb(30,39,49);
+}
+
+.news-container, .header {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    padding: 15px;
+    width: 90%;
+}
+
+.header {
+    background-color: rgb(30,39,49);
+    position: fixed;
+    width: 100%;
+}
+
+nav {
+    display: flex;
+    width: 100%;
+}
+
+.header-links {
+    align-items: center;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    text-decoration: none;
+    width: 100%;
+}
+
+.header-links li:hover {
+    scale: 1.5;
+}
+
+.news-container {
+    margin-top: 60px;
+}
+
+.news-card {
+    align-items: center;
+    background-color: rgb(30,39,49);
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    justify-content: space-around;
+    margin: 10px 0;
+    text-align: center;
+    width: 27%;
+}
+
+.news-card:hover {
+    scale: 1.1;
+}
+
+.news-card img {
+    margin-top: 10px;
+    max-height: 50%;
+    width: 50%;
+}
+
+.news-detail > .news-title {
+    font-size: 14pt;
+}
+
+news-date {
+    font-size: 10pt;
+}
+
+.news-detail {
+    align-items: center;
+    background-color: rgb(30,39,49);
+    border: 1px solid rgb(51, 51, 51);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    font-size: 16pt;
+    height: fit-content;
+    justify-content: space-around;
+    margin: auto;
+    margin-top: 80px;
+    text-align: center;
+    padding: 15px ;
+    width: 75%;
+}
+
+.news-detail * {
+    margin-top: 25px;
+}
+
+.news-detail img {
+    margin-top: 0;
+    width: 50%;
+}
+
+.news-detail > .news-title {
+    font-size: 20pt;
+}
+
+.news-content {
+    background-color: rgba(129, 129, 129, 0.173);
+    border-radius: 10px;
+    padding: 15px;
+    width: 60%;
+}
+
+.news-categories-container {
+    align-items: center;
+    background-color: rgba(129, 129, 129, 0.173);
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+    width: 90%;
+}
+
+.news-categories {
+    align-items: center;
+    display: flex;
+    margin: 0;
+}
+
+.news-bottom {
+    align-items: center;
+    display: flex;
+    font-size: 14pt;
+    justify-content: space-around;
+    width: 60%;
+}
+
+.news-form, .categories-form {
+    align-items: center;
+    background-color: rgba(240, 248, 255, 0.133);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    font-size: 14pt;
+    justify-content: space-around;
+    margin-top: 80px;
+    padding-top: 20px;
+    text-align: center;
+    width: 80%;
+}
+
+.news-form input, .news-form textarea, .news-form select {
+    border-radius: 5px;
+    border: 1px solid rgb(51, 51, 51);
+    color: black;
+    font-size: 12pt;
+    margin: 10px 0;
+    padding: 5px;
+    width: 60%;
+}
+
+#id_categories {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+#id_categories div {
+    align-items: center;
+    background-color: rgb(30, 40, 49);
+    border-radius: 10px;
+    display: flex;
+    cursor: pointer; 
+    justify-content: space-between;
+    margin: 14px 0;
+    width: 17%;
+}
+
+#id_categories div:hover {
+    background-color: rgb(65, 77, 185);
+}
+
+#id_categories label {
+    align-items: center;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: 85%;
+    padding: 0 10pt;
+    word-wrap: break-word;
+}
+
+#id_image {
+    border: none;
+    color: aliceblue;
+    cursor: pointer;
+    font-size: 14pt;
+}
+
+#id_image:hover {
+    cursor: pointer;
+}
+
+#id_categories input[type="checkbox"] {
+    border: none;
+    height: 15px;
+    width: 15px;
+}
+
+#id_categories input[type="checkbox"]:hover, #id_categories label:hover {
+    cursor: pointer;
+}
+
+.button {
+    background-color: rgb(29, 111, 29);
+    border-radius: 10px;
+    color: rgb(220, 220, 220);
+    cursor: pointer;
+    font-size: 14pt;
+    margin: 20pt 0;
+    padding: 15px;
+    text-align: center;
+    width: 20%;
+}
+
+.categories-form {
+    font-size: 16pt;
+    justify-content: space-evenly;
+    height: 40vh;
+    margin: auto;
+    width: 40%;
+}
+
+#categories-fieldset {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    height: 40%;
+    justify-content: space-around;
+    width: 100%;
+}
+
+#id_name {
+    border-radius: 5px;
+    padding: 10px;
+    width: 60%;
+}
