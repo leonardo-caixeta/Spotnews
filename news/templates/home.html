@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Página Inicial{% endblock %}
+
+{% block content %}
+    <h1>Página Inicial</h1>
+
+    {% for news_item in news_list %}
+        <div class="news-item">
+            <h2 class="news-title">{{ news_item.title }}</h2>
+            <span class="news-date">{{ news_item.created_at|date:"d/m/Y" }}</span>
+            <img src="{{ news_item.image.url }}" alt="{{ news_item.title }}">
+        </div>
+    {% endfor %}
+{% endblock %}
