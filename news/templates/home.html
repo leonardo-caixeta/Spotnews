@@ -9,7 +9,7 @@
         <div class="news-item">
             <h2 class="news-title">{{ news_item.title }}</h2>
             <span class="news-date">{{ news_item.created_at|date:"d/m/Y" }}</span>
-            <img src="{{ news_item.image.url }}" alt="{{ news_item.title }}">
+            <img src="/static{{ news_item.image.url }}" alt="{{ news_item.title }}">
         </div>
     {% endfor %}
 {% endblock %}
