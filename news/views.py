@@ -2,6 +2,8 @@ from django.http import HttpResponse
 from django.shortcuts import get_object_or_404, redirect, render
 from news.forms import CreateCategoryForm, CreateNewsForm
 from news.models import Category, News, User
+from news.serializers import CategorySerializer
+from rest_framework import viewsets
 
 
 def home(request):
@@ -55,3 +57,8 @@ def news_form(request):
             'users': users,
             'categories': categories
         })
+
+
+class CategoryViewSet(viewsets.ModelViewSet):
+    queryset = Category.objects.all()
+    serializer_class = CategorySerializer
