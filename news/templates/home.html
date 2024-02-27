@@ -7,7 +7,7 @@
 
     {% for news_item in news_list %}
         <div class="news-item">
-            <h2 class="news-title">{{ news_item.title }}</h2>
+            <h2 class="news-title"><a href="{% url 'news-details-page' news_item.id %}">{{ news_item.title }}</a></h2>
             <span class="news-date">{{ news_item.created_at|date:"d/m/Y" }}</span>
             <img src="/static{{ news_item.image.url }}" alt="{{ news_item.title }}">
         </div>
